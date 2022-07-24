@@ -81,4 +81,38 @@ As mentioned Juice Shop is the core of the laboratory, it is possible to install
     ![VM network card](assets/images/vm_network.png)
 
 ### Alpine Linux
+![Alpine Linux Logo](assets/images/alpine_logo.png)
 
+**Small. Simple. Secure.**  
+Alpine Linux is a security-oriented, lightweight Linux distribution based on musl libc, OpenRC and busybox.
+
+> Visit the [official wiki](https://wiki.alpinelinux.org) if you have any doubts or problems.
+> A full guide on how to install Alpine Linux can be found [here](https://wiki.alpinelinux.org/wiki/Installation#Installation_Handbook)
+
+1. Download the [virtual version](https://www.alpinelinux.org/downloads) selecting the proper architecture
+2. Mount the iso to the virtual machine and start it
+3. Login with **root** username and check if the network interface is up:
+
+    ```
+    ip a
+    ```
+    If a network interface is in "**state DOWN**", run the following command to bring it up:
+    ```
+    ip link set <interface name> up
+    ```
+4. Install Alpine in **System Disk Mode**:
+    - Run the "setup-alpine" script with:
+    
+        ```
+        setup-alpine
+        ```
+    - The setup-alpine script offers the following configuration options:  
+        *The bracketed options represent example configuration choices*
+        - ***Select keyboard layout:*** [it]
+        - ***Enter system hostname:*** [alpine-owasp]
+        - ***Select keyboard layout:*** [it]
+        - ***inizialize the available interface:*** [eth0]
+        - ***Ip address:*** [dhcp]
+        - ***Manual review:*** [no]
+        - ***New password:*** [password]
+        - ***Wich timezone are you in?:*** []
