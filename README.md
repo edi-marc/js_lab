@@ -86,8 +86,8 @@ As mentioned Juice Shop is the core of the laboratory, it is possible to install
 **Small. Simple. Secure.**  
 Alpine Linux is a security-oriented, lightweight Linux distribution based on musl libc, OpenRC and busybox.
 
-> Visit the [official wiki](https://wiki.alpinelinux.org) if you have any doubts or problems.
-> A full guide on how to install Alpine Linux can be found [here](https://wiki.alpinelinux.org/wiki/Installation#Installation_Handbook)
+> Visit the [official wiki](https://wiki.alpinelinux.org) if you have any doubts or problems.  
+> > A full guide on how to install Alpine Linux can be found [here](https://wiki.alpinelinux.org/wiki/Installation#Installation_Handbook)
 
 1. Download the [virtual version](https://www.alpinelinux.org/downloads) selecting the proper architecture
 2. Mount the iso to the virtual machine and start it
