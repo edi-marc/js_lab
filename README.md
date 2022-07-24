@@ -11,6 +11,7 @@ OWASP Juice Shop Laboratory includes a short setup guide for [OWASP Juice Shop](
 - [Setup](#setup)
     - [Intro](#intro)
     - [VirtualBox VM](#virtualbox-vm)
+    - [Alpine Linux](#alpine-linux)
 
 ## Information
 
@@ -61,4 +62,23 @@ As mentioned Juice Shop is the core of the laboratory, it is possible to install
 
 1. Download and Install [VirtualBox](https://www.virtualbox.org)
 2. Download and Install also the [VirtualBox VM VirtualBox Extension Pack](https://www.virtualbox.org/manual/ch01.html#intro-installing)
-3. 
+3. Create a new virtual machine with at least ***512 MB of RAM and 1 GB of disk space***.  
+    > More information on how to install Alpine Linux on a virtual machine can be found [here](https://wiki.alpinelinux.org/wiki/Installing_Alpine_in_a_virtual_machine)  
+    *It is recommended to raise both the RAM and disk space specifications if the host machine resources allow it*  
+4. Optional tweaks:
+    - Settings -> General -> Description: *fell free to use this [banner](assets/banners/vm_description.txt) to remember the username and password chosen*
+    - Settings -> System -> Processor(s): *if the host machine resources allow it, raise to 2 CPU*
+    - Settings -> System -> Motherboard -> Boot Order: *disallow Floppy and move it to the bottom of the list*
+5. To reach the machine is necessary to set a dedicated network for the laboratory:
+    - On VirtualBox go to:  
+    File -> Preferences -> Network -> *Add and activate a new NAT network as shown in the picture:*
+    
+    ![NAT network](assets/images/NAT_details.png)
+    
+    - On the virtual machine settings go to:  
+    Settings -> Network -> *then set up a network adapter as shown in the figure:*
+        
+    ![VM network card](assets/images/vm_network.png)
+
+### Alpine Linux
+
