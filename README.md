@@ -114,5 +114,16 @@ Alpine Linux is a security-oriented, lightweight Linux distribution based on mus
         - ***inizialize the available interface:*** [eth0]
         - ***Ip address:*** [dhcp]
         - ***Manual review:*** [no]
-        - ***New password:*** [password]
-        - ***Wich timezone are you in?:*** []
+        - ***New password:*** [Pa$$w0rd]
+        - ***Wich timezone are you in?:*** [Europe/Rome]
+        - ***HTTP/FTP proxy URL?*** [none]
+        - ***Wich NTP client to run?*** [chrony]
+        - ***Enter mirror number (1-73) or URL to add*** [70] (alpinelinux.mirror.garr.it)
+        - ***Setup a user?*** [no]
+        - ***Which ssh server?*** [openssh]
+        - ***Allow root ssh login?*** [yes]
+        - ***Which disk(s) would you like to use?*** [sda]
+        - ***How would you like to use it?*** [sys]
+        - ***WARNING: Erase the above disk(s) and continue?*** [yes]
+        
+Installation is complete. Please reboot --> reboot
