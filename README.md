@@ -126,4 +126,9 @@ Alpine Linux is a security-oriented, lightweight Linux distribution based on mus
         - ***How would you like to use it?*** [sys]
         - ***WARNING: Erase the above disk(s) and continue?*** [yes]
         
-Installation is complete. Please reboot --> reboot
+    - if the "setup-alpine" script has finished configuring the "sys" disk mode, the system should be ready to reboot right away, so type:
+    
+        ```
+        reboot
+        ```
+5. Continue with docker**:
