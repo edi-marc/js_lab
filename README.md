@@ -128,7 +128,22 @@ Alpine Linux is a security-oriented, lightweight Linux distribution based on mus
         
     - if the "setup-alpine" script has finished configuring the "sys" disk mode, the system should be ready to reboot right away, so type:
     
-        ```
-        reboot
-        ```
-5. Continue with docker**:
+        ```poweroff```
+        
+    - Now remove the initial installation media from the boot drive, or detach it from the port it's connected to, then restart the machine.
+    
+5. Install Docker:
+    - The installation script installs only the base operating system. **No** applications e.g. web server, mail server, desktop environment, or web browser are installed, and _root_ is the only user.
+    - It is recommended to interact with the system via **SSH**, you can simple reach this machine with another virtual machine of your choice with a network adapter attached to the _**NAT Network**_ named _**OWASP_net**_, as shown in the [figure](assets/images/vm_network.png). So first get the IP address of the machine, you can do this in two ways:
+    
+        - during the booting process the dhcp client is started so in the output, on the screen, you can see a line with the following information:
+        
+            ```udhcpc: lease of 10.0.2.X obtained from 10.0.2.3, lease time 600```
+        
+            the 10.0.2.X is the IP address needed to connect via SSH.
+        
+        - ...or you can use [nmap](https://nmap.org) to find the right ip address to connect, on a system running on the same network simply running:
+        
+            ```nmap -sn 10.0.2.0/24```
+        
+    - Now you can connect to the system with: ```ssh root@10.0.2.X``` and enter your password
