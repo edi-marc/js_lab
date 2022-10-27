@@ -12,6 +12,7 @@ OWASP Juice Shop Laboratory includes a short setup guide for [OWASP Juice Shop](
     - [Intro](#intro)
     - [VirtualBox VM](#virtualbox-vm)
     - [Alpine Linux](#alpine-linux)
+    - [Juice Shop](#juice-shop)
 
 ## Information
 
@@ -179,8 +180,10 @@ Docker provides the ability to package and run an application in a loosely isola
         
         - When finished upgrade the currently installed packages with ```apk upgrade``` 
         
-     - Now It's time to install ***Docker***: it's needed only two commands for doing that, but if you wish, you can use this [wiki](https://wiki.alpinelinux.org/wiki/Docker) to customize your installation at your need:
+   - Now It's time to install ***Docker***: it's needed only two commands for doing that, but if you wish, you can use this [wiki](https://wiki.alpinelinux.org/wiki/Docker) to customize your installation at your need:
     
         ```apk add docker``` To install the docker package.
         
         ```rc-update add docker boot``` To start the Docker daemon at boot.
+
+### Juice Shop
