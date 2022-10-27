@@ -156,4 +156,31 @@ Alpine Linux is a security-oriented, lightweight Linux distribution based on mus
 
 ![Docker Logo](/assets/images/Docker-Logo-White-RGB_Horizontal.png)
 
-Docker is an open platform for developing, shipping, and running applications. It enables you to separate your applications from your infrastructure so you can deliver software quickly. With Docker, you can manage your infrastructure in the same ways you manage your applications. Docker provides the ability to package and run an application in a loosely isolated environment called a container.
+Docker is an open platform for developing, shipping, and running applications.
+It enables you to separate your applications from your infrastructure so you can deliver software quickly.
+With Docker, you can manage your infrastructure in the same ways you manage your applications.
+Docker provides the ability to package and run an application in a loosely isolated environment called a container.
+
+   - You can familiarize with the package manager provided in Alpine called **apk** _(Alpine Package Keeper)_ from this [wiki](https://wiki.alpinelinux.org/wiki/Alpine_Package_Keeper):
+     
+     - First we need to add the _"Community Respositories"_ to the package manager, so open with a text editor the ```/etc/apk/repositories``` file. For doing this you can use [Vi](https://ex-vi.sourceforge.net), find and use some _"Vi cheat sheet"_ to learn how to use this tool. The commands that we need are:
+        
+        - ```vi /etc/apk/repositories``` To open with Vi the file.
+        
+        - **Press** ```i``` To insert.
+        
+        - Modify the line of the community repositories deleting the comment ```#``` like this:
+        
+          ```http://alpinelinux.mirror.garr.it/vX.YY/community```
+          
+        - **Type** ```:wq``` To save and quit.
+        
+        - Now update the index of available packages with ```apk update```
+        
+        - When finished upgrade the currently installed packages with ```apk upgrade``` 
+        
+     - Now It's time to install ***Docker***: it's needed only two commands for doing that, but if you wish, you can use this [wiki](https://wiki.alpinelinux.org/wiki/Docker) to customize your installation at your need:
+    
+        ```apk add docker``` To install the docker package.
+        
+        ```rc-update add docker boot``` To start the Docker daemon at boot.
