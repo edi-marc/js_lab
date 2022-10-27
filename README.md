@@ -132,18 +132,28 @@ Alpine Linux is a security-oriented, lightweight Linux distribution based on mus
         
     - Now remove the initial installation media from the boot drive, or detach it from the port it's connected to, then restart the machine.
     
-5. Install Docker:
     - The installation script installs only the base operating system. **No** applications e.g. web server, mail server, desktop environment, or web browser are installed, and _root_ is the only user.
     - It is recommended to interact with the system via **SSH**, you can simple reach this machine with another virtual machine of your choice with a network adapter attached to the _**NAT Network**_ named _**OWASP_net**_, as shown in the [figure](assets/images/vm_network.png). So first get the IP address of the machine, you can do this in two ways:
     
         - during the booting process the dhcp client is started so in the output, on the screen, you can see a line with the following information:
         
-            ```udhcpc: lease of 10.0.2.X obtained from 10.0.2.3, lease time 600```
+            ```udhcpc: lease of 10.0.2.X obtained from 10.0.2.Y, lease time 600```
         
-            the 10.0.2.X is the IP address needed to connect via SSH.
+            **the 10.0.2.X is the IP address needed to connect via SSH.**
         
         - ...or you can use [nmap](https://nmap.org) to find the right ip address to connect, on a system running on the same network simply running:
         
             ```nmap -sn 10.0.2.0/24```
         
-    - Now you can connect to the system with: ```ssh root@10.0.2.X``` and enter your password
+    - Now you can connect to the system with: ```ssh root@10.0.2.X``` and enter your password.
+    - If you wish, you can customize your system with a custom banner, *fell free to use this [banner](assets/banners/vm_motd.txt)*. It's possible to change the "message of the day" by editing the ```/etc/motd``` file with the one provided:
+    
+        - To get the banner, it's possible to use a tool called [wget](https://www.gnu.org/software/wget), a computer program that retrieves content from web servers:
+        
+            ```wget https://raw.githubusercontent.com/edi-marc/juice-shop_lab/main/assets/banners/vm_motd.txt -O /etc/motd```
+            
+5. Install Docker:
+
+![Docker Logo](/assets/images/Docker-Logo-White-RGB_Horizontal.png)
+
+Docker is an open platform for developing, shipping, and running applications. It enables you to separate your applications from your infrastructure so you can deliver software quickly. With Docker, you can manage your infrastructure in the same ways you manage your applications. Docker provides the ability to package and run an application in a loosely isolated environment called a container.
