@@ -13,6 +13,7 @@ OWASP Juice Shop Laboratory includes a short setup guide for [OWASP Juice Shop](
     - [VirtualBox VM](#virtualbox-vm)
     - [Alpine Linux](#alpine-linux)
     - [Juice Shop](#juice-shop)
+    - [The script](#the-script)
 
 ## Information
 
@@ -63,7 +64,7 @@ As mentioned Juice Shop is the core of the laboratory, it is possible to install
 
 1. Download and Install [VirtualBox](https://www.virtualbox.org)
 2. Download and Install also the [VirtualBox VM VirtualBox Extension Pack](https://www.virtualbox.org/manual/ch01.html#intro-installing)
-3. Create a new virtual machine with at least ***512 MB of RAM and 1 GB of disk space***.  
+3. Create a new virtual machine with at least ***512 MB of RAM and 3 GB of disk space***.  
     > More information on how to install Alpine Linux on a virtual machine can be found [here](https://wiki.alpinelinux.org/wiki/Installing_Alpine_in_a_virtual_machine)  
     *It is recommended to raise both the RAM and disk space specifications if the host machine resources allow it*  
 4. Optional tweaks:
@@ -174,7 +175,7 @@ Docker provides the ability to package and run an application in a loosely isola
         
           ```http://alpinelinux.mirror.garr.it/vX.YY/community```
           
-        - **Type** ```:wq``` To save and quit.
+        - **Type** ```:wq``` To save and quit OR ```:q!``` To quit without saving.
         
         - Now update the index of available packages with ```apk update```
         
@@ -187,3 +188,31 @@ Docker provides the ability to package and run an application in a loosely isola
         ```rc-update add docker boot``` To start the Docker daemon at boot.
 
 ### Juice Shop
+
+At this point the Virtual Machine is correctly set, and the docker setup is finished, so it's time to install ***Juice Shop***, the core of the laboratory, via _Docker_.
+A simple shell script is available to do this, to get it on the machine run these commands:
+
+   - Download the script:
+   
+   ```cd && wget https://raw.githubusercontent.com/edi-marc/juice-shop_lab/main/assets/scripts/rebuild_juice_shop.sh```
+    
+   - Make the script executable and prevent it from being accidentally modified:
+   
+   ```chmod 0500 rebuild_juice_shop.sh```
+   
+   - Run it!
+   
+   ```./rebuild_juice_shop.sh```
+   
+   ### The [script](https://raw.githubusercontent.com/edi-marc/juice-shop_lab/main/assets/scripts/rebuild_juice_shop.sh):
+   
+   ![output_script](/assets/images/output_script_example.png)
+   
+   The provided script can be used both for the _**first installation**_, but also to _**update**_ Juice Shop to the latest version or if, in case of errors, to _**rebuild**_ the Juice Shop instance from scratch.
+   
+   The script performs several tasks:
+
+   - Download the latest docker image of _Juice Shop_;
+   - Remove previous container, if any and start a new one;
+   - Displays current images and containers;
+   
