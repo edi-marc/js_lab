@@ -112,7 +112,6 @@ Alpine Linux is a security-oriented, lightweight Linux distribution based on mus
         *The bracketed options represent example configuration choices*
         - ***Select keyboard layout:*** [it]
         - ***Enter system hostname:*** [alpine-owasp]
-        - ***Select keyboard layout:*** [it]
         - ***inizialize the available interface:*** [eth0]
         - ***Ip address:*** [dhcp]
         - ***Manual review:*** [no]
@@ -181,7 +180,7 @@ Docker provides the ability to package and run an application in a loosely isola
         
         - When finished upgrade the currently installed packages with ```apk upgrade``` 
         
-   - Now It's time to install ***Docker***: it's needed only two commands for doing that, but if you wish, you can use this [wiki](https://wiki.alpinelinux.org/wiki/Docker) to customize your installation at your need:
+   - Now It's time to install ***Docker***. It's needed only two commands for doing that, but if you wish, you can use this [wiki](https://wiki.alpinelinux.org/wiki/Docker) to customize your installation at your need:
     
         ```apk add docker``` To install the docker package.
         
