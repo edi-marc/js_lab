@@ -14,6 +14,7 @@ OWASP Juice Shop Laboratory includes a short setup guide for [OWASP Juice Shop](
     - [Alpine Linux](#alpine-linux)
     - [Juice Shop](#juice-shop)
     - [The script](#the-script)
+- [Explore Juice Shop](#explore-juice-shop)
 
 ## Information
 
@@ -207,7 +208,7 @@ A simple shell script is available to do this, to get it on the machine run thes
    
    ```./rebuild_juice_shop.sh```
    
-   ### The [script](https://raw.githubusercontent.com/edi-marc/juice-shop_lab/main/assets/scripts/rebuild_juice_shop.sh):
+### The [script](https://raw.githubusercontent.com/edi-marc/juice-shop_lab/main/assets/scripts/rebuild_juice_shop.sh):
    
    ![output_script](/assets/images/output_script_example.png)
    
@@ -219,3 +220,10 @@ A simple shell script is available to do this, to get it on the machine run thes
    - Remove previous container, if any and start a new one;
    - Displays current images and containers;
    
+## Explore Juice Shop
+
+Now that everything is set up correctly, connect to the virtual machine port 3000 to explore "_OWASP Juice Shop_":
+
+```http://10.0.2.X:3000```
+
+***Enjoy!***
