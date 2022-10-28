@@ -199,6 +199,10 @@ A simple shell script is available to do this, to get it on the machine run thes
    
    ```chmod 0500 rebuild_juice_shop.sh```
    
+   - Reboot the system:
+   
+   ```reboot```
+   
    - Run it!
    
    ```./rebuild_juice_shop.sh```
